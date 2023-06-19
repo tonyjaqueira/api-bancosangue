@@ -34,9 +34,12 @@ http://localhost:8085/swagger-ui/index.html
 
 <h3>Tecnologias utilizadas</h3>
 
-* AWS Cognito
-* MongoDB
-* Testcontainers
+* Swagger
+* Mysql
+* Spring Security
+* Token JWT
+* Lombok
+* Spring Data
 
 <h3>Desenvolvedor</h3>
 Antônio da Silva Araújo Neto
