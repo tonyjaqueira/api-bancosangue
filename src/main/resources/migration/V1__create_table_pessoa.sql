@@ -1,0 +1,15 @@
+CREATE TABLE pessoa (
+                        pessoa_id bigint NOT NULL AUTO_INCREMENT,
+                        altura double DEFAULT NULL,
+                        cpf varchar(255) DEFAULT NULL,
+                        data_nasc date DEFAULT NULL,
+                        mae varchar(255) DEFAULT NULL,
+                        nome varchar(255) DEFAULT NULL,
+                        pai varchar(255) DEFAULT NULL,
+                        peso double DEFAULT NULL,
+                        rg varchar(255) DEFAULT NULL,
+                        sexo varchar(255) DEFAULT NULL,
+                        tipo_sanguineo varchar(255) DEFAULT NULL,
+                        contato_id bigint DEFAULT NULL,
+                        endereco_id bigint DEFAULT NULL,
+                        PRIMARY KEY (pessoa_id));
