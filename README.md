@@ -32,6 +32,13 @@ mvn spring-boot:run
 <h3>Swagger da API</h3>
 http://localhost:8085/swagger-ui/index.html
 
+
+<h3>Usuário para logar na aplicação</h3>
+
+user: admin
+password: admin
+
+
 <h3>Tecnologias utilizadas</h3>
 
 * Swagger
