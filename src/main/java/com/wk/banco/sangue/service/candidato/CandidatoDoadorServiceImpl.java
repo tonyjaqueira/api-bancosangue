@@ -30,7 +30,7 @@ import static com.wk.banco.sangue.utils.DecimalFormatDate.arrendondarDecimalPara
 @Service
 @AllArgsConstructor
 @Slf4j
-public class CandidadoDoadorServiceImpl implements CandidadoDoadorService {
+public class CandidatoDoadorServiceImpl implements CandidatoDoadorService {
 
     private final PessoaService pessoaService;
 
@@ -59,7 +59,7 @@ public class CandidadoDoadorServiceImpl implements CandidadoDoadorService {
                     var faixaEtariaFim = faixaEtaria + 10;
                     var pessoasFaixaEtaria = getPessoasFaixaEtaria(lisPessoas, faixaEtaria, faixaEtariaFim);
                     if ( !pessoasFaixaEtaria.isEmpty() ) {
-                        var imcMedio = calcularMediaImcGrupoPessoas(pessoasFaixaEtaria);
+                        var imcMedio = arrendondarDecimalParaCima(calcularMediaImcGrupoPessoas(pessoasFaixaEtaria));
                         var candidato = CandidatoImcFaixaEtaria.builder()
                                 .faixaEtaria(String.valueOf(faixaEtaria).concat(" a ").concat(String.valueOf(faixaEtariaFim)))
                                 .imc(imcMedio).build();
@@ -174,7 +174,7 @@ public class CandidadoDoadorServiceImpl implements CandidadoDoadorService {
 
     private static double calcularMediaImcGrupoPessoas(List<Pessoa> pessoasFaixaEtaria) {
         return pessoasFaixaEtaria.stream()
-                .mapToDouble(CandidadoDoadorServiceImpl::calculaImc)
+                .mapToDouble(CandidatoDoadorServiceImpl::calculaImc)
                 .average()
                 .orElse(0);
     }

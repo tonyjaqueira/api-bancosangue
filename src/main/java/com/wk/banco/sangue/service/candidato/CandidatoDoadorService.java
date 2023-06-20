@@ -8,7 +8,7 @@ import com.wk.banco.sangue.domain.model.response.MediaIdadeTipoSanguineo;
 import java.util.List;
 import java.util.Map;
 
-public interface CandidadoDoadorService {
+public interface CandidatoDoadorService {
 
     List<CandidatoDoadorPorEstado> candidatodPorEstado();
 
